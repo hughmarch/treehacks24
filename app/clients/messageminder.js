@@ -1,12 +1,7 @@
-import { config } from "dotenv";
+require('dotenv').config();
 
-config();
 const url = 'https://api.together.xyz/v1/chat/completions';
 const apiKey = process.env.API_KEY;
-
-const sleep = (ms) => {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 // parameters:
 // message - the message we are looking for a response to, i.e. "can you help me with my homework"
@@ -14,7 +9,7 @@ const sleep = (ms) => {
 // numSuggestedResponses - number of suggested responses to return
 // returns:
 // suggestedResponses - list of suggestions provided by LLM model
-export default getSuggestedResponses = async (message, userPrompt, numSuggestedResponses) => {
+const getSuggestedResponses = async (message, userPrompt, numSuggestedResponses) => {
 
   const prompt = `
     Imagine you are texting your friend. Come up with a response to their text. Use exclusively lowercase
@@ -78,3 +73,5 @@ export default getSuggestedResponses = async (message, userPrompt, numSuggestedR
     throw e;
   }
 }
+
+module.exports = getSuggestedResponses;
