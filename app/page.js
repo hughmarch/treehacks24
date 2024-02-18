@@ -13,7 +13,7 @@ export default function Home() {
       <h1 className="mb-4 text-6xl font-extrabold leading-none tracking-tight text-blue-600 md:text-5xl lg:text-6xls mx-auto text-center mt-4">
         MessageMinder
       </h1>
-      <div className="main">
+      <div className="main mb-4">
         {messages.map((message, index) => (
           <Message
             key={index}

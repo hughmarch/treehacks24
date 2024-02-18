@@ -1,29 +1,29 @@
 [
     {
         "image": "https://picsum.photos/200",
-        "name": "John Doe",
-        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "name": "Lillian Zhu",
+        "message": "can you help me with my homework?",
         "time": "10:30 AM",
         "status": "Delivered"
     },
     {
-        "image": "https://picsum.photos/200",
-        "name": "Alice Smith",
-        "message": "Nullam ac felis fermentum, dignissim magna quis, luctus nunc.",
+        "image": "https://picsum.photos/201",
+        "name": "Sathvik Nallamalli",
+        "message": "what do you wanna eat",
         "time": "11:15 AM",
         "status": "Delivered"
     },
     {
-        "image": "https://picsum.photos/200",
-        "name": "Bob Johnson",
-        "message": "Aenean vel metus vel augue sollicitudin gravida in vel est.",
+        "image": "https://picsum.photos/202",
+        "name": "Faraz Qureshi",
+        "message": "now ur turn to ask me a question",
         "time": "12:00 PM",
         "status": "Delivered"
     },
     {
-        "image": "https://picsum.photos/200",
-        "name": "Emily Brown",
-        "message": "Integer mattis ex ut sem tristique, in facilisis tortor vestibulum.",
+        "image": "https://picsum.photos/203",
+        "name": "Timmy Vo",
+        "message": "she broke up with me 😭",
         "time": "1:30 PM",
         "status": "Delivered"
     }

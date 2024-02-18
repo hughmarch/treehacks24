@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const url = 'https://api.together.xyz/v1/chat/completions';
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
 // parameters:
 // message - the message we are looking for a response to, i.e. "can you help me with my homework"
@@ -10,11 +10,11 @@ const apiKey = process.env.API_KEY;
 // returns:
 // suggestedResponses - list of suggestions provided by LLM model
 const getSuggestedResponses = async (message, userPrompt, numSuggestedResponses) => {
-
+  
   const prompt = `
     Imagine you are texting your friend. Come up with a response to their text. Use exclusively lowercase
-    and don't use any punctuation. Abbreviate words like "you" to "u", "right now" to "rn," etc. Provide
-    your response and nothing else.
+    and don't use any punctuation. Abbreviate words like "you" to "u", "right now" to "rn," etc. PROVIDE
+    YOUR RESPONSE AND NOTHING ELSE! NO EXTRA COMMENTS!
 
     FRIEND'S TEXT:
     ${message}
@@ -63,6 +63,10 @@ const getSuggestedResponses = async (message, userPrompt, numSuggestedResponses)
   try {
     const response = await fetch(url, options);
     const json = await response.json();
+
+    if (!response.ok) {
+      throw new Error(JSON.stringify(json));
+    }
 
     return json.choices
       .map((choice) => {
